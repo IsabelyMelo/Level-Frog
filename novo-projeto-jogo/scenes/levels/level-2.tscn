@@ -16,10 +16,13 @@ scale = Vector2(0.796455, 0.796455)
 texture = ExtResource("1_6akv6")
 
 [node name="StaticBody2D" parent="." instance=ExtResource("7_6akv6")]
-position = Vector2(-167, 209)
+position = Vector2(-216, 190)
+
+[node name="StaticBody2D2" parent="." instance=ExtResource("7_6akv6")]
+position = Vector2(414, 189)
 
 [node name="player" parent="." instance=ExtResource("1_nol18")]
-position = Vector2(-306.99994, 141.00002)
+position = Vector2(-412, 118.000015)
 rotation = 0.00181122
 collision_layer = 3
 collision_mask = 3
@@ -28,10 +31,7 @@ collision_mask = 3
 visible = false
 
 [node name="Crystal1" parent="." instance=ExtResource("6_jr5bq")]
-position = Vector2(509, 97)
+position = Vector2(582, 95)
 
 [node name="Area2D" parent="." instance=ExtResource("6_mr0nw")]
 position = Vector2(58, -313)
-
-[node name="StaticBody2D2" parent="." instance=ExtResource("7_6akv6")]
-position = Vector2(344, 206)
