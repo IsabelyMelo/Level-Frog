@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=3 uid="uid://diymrhfub8udy"]
+
+[ext_resource type="PackedScene" uid="uid://ygpbxd83axwt" path="res://traps/traps.tscn" id="1_ov1ij"]
+[ext_resource type="Texture2D" uid="uid://0ycb2bsggr37" path="res://assets/backgrounds/levels/sem-lago-level-1.JPG" id="1_pirx1"]
+[ext_resource type="PackedScene" uid="uid://wc7khoqdj8e0" path="res://player/player1.tscn" id="2_jsq00"]
+[ext_resource type="PackedScene" uid="uid://eskrtblwhn3o" path="res://ui/HealthBar.tscn" id="3_ivs8b"]
+[ext_resource type="PackedScene" uid="uid://ck7lxqxlreheu" path="res://platforms/plataform_level1.tscn" id="4_wubvj"]
+[ext_resource type="PackedScene" uid="uid://vwgky611w1dh" path="res://platforms/fakeplataform_level1.tscn" id="5_wejd8"]
+[ext_resource type="PackedScene" uid="uid://o633osrk6aw5" path="res://next-level/crystal.tscn" id="6_de582"]
+
+[node name="main" type="Node2D"]
+position = Vector2(478, 255)
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(98.9862, 84.625)
+scale = Vector2(1.12112, 1.16102)
+texture = ExtResource("1_pirx1")
+
+[node name="vida" parent="." instance=ExtResource("3_ivs8b")]
+visible = false
+
+[node name="plataform1" parent="." instance=ExtResource("4_wubvj")]
+position = Vector2(-283, 100)
+
+[node name="plataform2" parent="." instance=ExtResource("4_wubvj")]
+position = Vector2(430, 99)
+
+[node name="fakePlataform" parent="." instance=ExtResource("5_wejd8")]
+position = Vector2(149, 115)
+
+[node name="player" parent="." instance=ExtResource("2_jsq00")]
+position = Vector2(-406.99997, 60)
+rotation = 0.00181122
+scale = Vector2(0.99999994, 0.99999994)
+collision_layer = 3
+collision_mask = 3
+
+[node name="Crystal1" parent="." instance=ExtResource("6_de582")]
+position = Vector2(598, 67)
+
+[node name="death" parent="." instance=ExtResource("1_ov1ij")]
+position = Vector2(-40, 367)
+
+[node name="death2" parent="." instance=ExtResource("1_ov1ij")]
+position = Vector2(-409, 367)
+
+[node name="death3" parent="." instance=ExtResource("1_ov1ij")]
+position = Vector2(327, 367)
+
+[node name="death4" parent="." instance=ExtResource("1_ov1ij")]
+position = Vector2(695, 367)

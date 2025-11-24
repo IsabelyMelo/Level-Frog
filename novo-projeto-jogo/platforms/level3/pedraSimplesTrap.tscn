@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://ngab5fs5x136"]
+
+[ext_resource type="Script" uid="uid://c0yly8dw7pfmd" path="res://platforms/level3/pedra_simples_trap.gd" id="1_3ginj"]
+[ext_resource type="Texture2D" uid="uid://dsnfvx80ne5ps" path="res://assets/backgrounds/levels/pedras_pequenas_sem fundo_4.png" id="1_tlmrr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bbht8"]
+size = Vector2(146, 55.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3ginj"]
+size = Vector2(146, 55)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wsuqi"]
+size = Vector2(219, 171)
+
+[node name="pedraSimplesTrap" type="Area2D"]
+script = ExtResource("1_3ginj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(89, 65)
+scale = Vector2(1.0013626, 0.84979415)
+texture = ExtResource("1_tlmrr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(90, 58.75)
+shape = SubResource("RectangleShape2D_bbht8")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+visible = false
+position = Vector2(90, 58.5)
+shape = SubResource("RectangleShape2D_3ginj")
+
+[node name="Detector" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detector"]
+visible = false
+position = Vector2(99.5, 55.5)
+shape = SubResource("RectangleShape2D_wsuqi")
+debug_color = Color(1, 0.59342134, 0.52757865, 0.41960785)

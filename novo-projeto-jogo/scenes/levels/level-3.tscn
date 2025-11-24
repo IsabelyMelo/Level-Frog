@@ -1,0 +1,55 @@
+[gd_scene load_steps=8 format=3 uid="uid://bu8wjqrotuw7k"]
+
+[ext_resource type="Texture2D" uid="uid://c2wlafh14aqy8" path="res://assets/backgrounds/levels/level-3.png" id="1_tkmqy"]
+[ext_resource type="PackedScene" uid="uid://wc7khoqdj8e0" path="res://player/player1.tscn" id="2_tfl7p"]
+[ext_resource type="PackedScene" uid="uid://eskrtblwhn3o" path="res://ui/HealthBar.tscn" id="3_plg4r"]
+[ext_resource type="PackedScene" uid="uid://ngab5fs5x136" path="res://platforms/level3/pedraSimplesTrap.tscn" id="6_sde5f"]
+[ext_resource type="PackedScene" uid="uid://o633osrk6aw5" path="res://next-level/crystal.tscn" id="6_tkmqy"]
+[ext_resource type="PackedScene" uid="uid://ygpbxd83axwt" path="res://traps/traps.tscn" id="7_odt7l"]
+[ext_resource type="PackedScene" uid="uid://bdo2mtxvn553s" path="res://platforms/level3/pedra1.tscn" id="7_sde5f"]
+
+[node name="main" type="Node2D"]
+position = Vector2(477, 254)
+
+[node name="Level3" type="Sprite2D" parent="."]
+position = Vector2(100, 72)
+scale = Vector2(0.8619792, 0.8619792)
+texture = ExtResource("1_tkmqy")
+
+[node name="vida" parent="." instance=ExtResource("3_plg4r")]
+visible = false
+
+[node name="Crystal1" parent="." instance=ExtResource("6_tkmqy")]
+position = Vector2(632, 173)
+
+[node name="StaticBody2D2" parent="." instance=ExtResource("7_sde5f")]
+position = Vector2(-378, 231)
+
+[node name="StaticBody2D3" parent="." instance=ExtResource("7_sde5f")]
+position = Vector2(-669, 231)
+
+[node name="StaticBody2D4" parent="." instance=ExtResource("7_sde5f")]
+position = Vector2(393, 231)
+
+[node name="player" parent="." instance=ExtResource("2_tfl7p")]
+position = Vector2(-403, 239)
+rotation = 0.0018112194
+scale = Vector2(0.9999999, 0.9999999)
+collision_layer = 3
+collision_mask = 3
+
+[node name="pedraSimplesTrap" parent="." instance=ExtResource("6_sde5f")]
+position = Vector2(6, 121)
+scale = Vector2(0.72, 0.72)
+
+[node name="death1" parent="." instance=ExtResource("7_odt7l")]
+position = Vector2(-489, 430)
+
+[node name="death2" parent="." instance=ExtResource("7_odt7l")]
+position = Vector2(-119, 430)
+
+[node name="death3" parent="." instance=ExtResource("7_odt7l")]
+position = Vector2(250, 430)
+
+[node name="death4" parent="." instance=ExtResource("7_odt7l")]
+position = Vector2(620, 430)

@@ -1,0 +1,73 @@
+[gd_scene load_steps=8 format=3 uid="uid://5e5loqk4lbb1"]
+
+[ext_resource type="Script" uid="uid://dwvvke003u7pa" path="res://scenes/menus/menu.gd" id="1_y80bi"]
+[ext_resource type="Texture2D" uid="uid://buwtvmbberaon" path="res://assets/backgrounds/menu/bg-1-lake-1920x1080-bottom.jpg" id="1_yq34a"]
+[ext_resource type="Texture2D" uid="uid://bnetx6j7646b1" path="res://assets/character/menu/frog.png" id="2_fw0bg"]
+[ext_resource type="Texture2D" uid="uid://bmmrf6cx2y7va" path="res://assets/elements/menu/start.png" id="3_t1b8g"]
+[ext_resource type="Texture2D" uid="uid://tlya440gjiry" path="res://assets/elements/menu/new_hover_start.png" id="4_yq34a"]
+[ext_resource type="Texture2D" uid="uid://cmsglx37h7xvk" path="res://assets/elements/menu/exit.png" id="5_fw0bg"]
+[ext_resource type="Texture2D" uid="uid://cwg8xrcmh36ly" path="res://assets/elements/menu/new_hover_exit.png" id="6_t1b8g"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_y80bi")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 646.0
+color = Color(0.227451, 0.74902, 0.270588, 1)
+
+[node name="Bg-1-lake-1920x1080-bottom" type="Sprite2D" parent="."]
+position = Vector2(577.111, 324.5)
+scale = Vector2(0.600926, 0.600926)
+texture = ExtResource("1_yq34a")
+
+[node name="Frog" type="Sprite2D" parent="."]
+position = Vector2(324, 462)
+scale = Vector2(0.43, 0.43)
+texture = ExtResource("2_fw0bg")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="exit" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 461.0
+offset_top = 205.0
+offset_right = 1997.0
+offset_bottom = 1229.0
+scale = Vector2(0.16, 0.16)
+texture_normal = ExtResource("5_fw0bg")
+texture_pressed = ExtResource("5_fw0bg")
+texture_hover = ExtResource("6_t1b8g")
+
+[node name="start" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 463.0
+offset_top = 83.0
+offset_right = 1999.0
+offset_bottom = 1107.0
+scale = Vector2(0.16, 0.16)
+texture_normal = ExtResource("3_t1b8g")
+texture_pressed = ExtResource("3_t1b8g")
+texture_hover = ExtResource("4_yq34a")
+
+[connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="start" to="." method="_on_start_pressed"]

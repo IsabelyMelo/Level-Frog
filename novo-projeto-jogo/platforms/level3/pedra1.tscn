@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bdo2mtxvn553s"]
+
+[ext_resource type="Texture2D" uid="uid://c8fgo6nlcacg0" path="res://assets/backgrounds/levels/pedras_pequenas_sem fundo_1.png" id="1_k0jyw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bbht8"]
+size = Vector2(347, 107)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(196, 121)
+scale = Vector2(1.8588034, 1.577451)
+texture = ExtResource("1_k0jyw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(186.5, 114.5)
+shape = SubResource("RectangleShape2D_bbht8")

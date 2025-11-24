@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://ygpbxd83axwt"]
+
+[ext_resource type="Script" uid="uid://dqo870kflyr80" path="res://traps/traps.gd" id="2_57cd2"]
+[ext_resource type="Texture2D" uid="uid://c2udke8fqwkti" path="res://assets/elements/death/death-1.png" id="2_wnpce"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w0pts"]
+size = Vector2(390, 130)
+
+[node name="Area2D" type="Area2D"]
+position = Vector2(1, 1)
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("2_57cd2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_wnpce")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_w0pts")

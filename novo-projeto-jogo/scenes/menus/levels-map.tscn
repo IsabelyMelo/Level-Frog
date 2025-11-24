@@ -1,0 +1,83 @@
+[gd_scene load_steps=6 format=3 uid="uid://dtn7erc8q5unh"]
+
+[ext_resource type="Script" uid="uid://3kkx7ebb1q0b" path="res://scenes/menus/levels_map.gd" id="1_gbrii"]
+[ext_resource type="Texture2D" uid="uid://dd1he38lpx68r" path="res://assets/backgrounds/map/map-levels.png" id="2_gbrii"]
+[ext_resource type="Texture2D" uid="uid://bnetx6j7646b1" path="res://assets/character/menu/frog.png" id="3_3tswa"]
+[ext_resource type="Texture2D" uid="uid://cmsglx37h7xvk" path="res://assets/elements/menu/exit.png" id="4_dhk2l"]
+[ext_resource type="Texture2D" uid="uid://cwg8xrcmh36ly" path="res://assets/elements/menu/new_hover_exit.png" id="5_5c6tf"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gbrii")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 646.0
+color = Color(0.227451, 0.74902, 0.270588, 1)
+
+[node name="Bg-1-lake-1920x1080-bottom" type="Sprite2D" parent="."]
+position = Vector2(576, 322)
+scale = Vector2(0.858631, 0.846354)
+texture = ExtResource("2_gbrii")
+
+[node name="Frog" type="Sprite2D" parent="."]
+position = Vector2(143, 68)
+scale = Vector2(0.213, 0.217)
+texture = ExtResource("3_3tswa")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="exit" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 63.0
+offset_right = 1573.0
+offset_bottom = 1087.0
+scale = Vector2(0.16, 0.16)
+texture_normal = ExtResource("4_dhk2l")
+texture_pressed = ExtResource("4_dhk2l")
+texture_hover = ExtResource("5_5c6tf")
+
+[node name="level_1" type="Button" parent="."]
+layout_mode = 0
+offset_left = 144.0
+offset_top = 366.0
+offset_right = 189.0
+offset_bottom = 413.0
+
+[node name="level_2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 251.0
+offset_top = 290.0
+offset_right = 296.0
+offset_bottom = 337.0
+
+[node name="level_3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 350.0
+offset_top = 259.0
+offset_right = 395.0
+offset_bottom = 306.0
+
+[connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="level_1" to="." method="_on_level_1_pressed"]
+[connection signal="pressed" from="level_2" to="." method="_on_level_2_pressed"]
+[connection signal="pressed" from="level_3" to="." method="_on_level_3_pressed"]
