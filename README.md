@@ -18,15 +18,6 @@ O projeto foi desenvolvido como parte de uma atividade acadêmica, com foco na a
 -   Mecânica de movimento e pulo do personagem.
 -   Armadilhas básicas e obstáculos.
 
-## 📸 Imagens
-
-| Menu Principal | Menu Fases | 
-|:---:|:---:|
-| ![Menu](Level-Frog
-images/menu.png) | ![Levels](Level-Frog
-images/level-map.png) | 
-
-
 ## 🎮 Como Jogar
 
 ### Pré-requisitos
