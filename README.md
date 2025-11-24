@@ -22,7 +22,9 @@ O projeto foi desenvolvido como parte de uma atividade acadêmica, com foco na a
 
 | Menu Principal | Menu Fases | 
 |:---:|:---:|
-| ![Menu](images/menu.png) | ![Levels](images/level-map.png) | 
+| ![Menu](Level-Frog
+images/menu.png) | ![Levels](Level-Frog
+images/level-map.png) | 
 
 
 ## 🎮 Como Jogar
