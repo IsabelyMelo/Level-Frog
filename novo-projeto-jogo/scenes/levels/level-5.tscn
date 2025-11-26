@@ -1,28 +1,31 @@
 [gd_scene load_steps=7 format=3 uid="uid://bm1e1r0txemiy"]
 
 [ext_resource type="Texture2D" uid="uid://440g2nytsflw" path="res://assets/backgrounds/levels/level-5.jpg" id="1_8ltht"]
-[ext_resource type="PackedScene" uid="uid://c563q51vdodul" path="res://platforms/level-2/plataform-level2.tscn" id="2_xow1m"]
+[ext_resource type="PackedScene" uid="uid://cu5mtjfegdc5j" path="res://platforms/level-5/plataform-level5.tscn" id="2_8ltht"]
 [ext_resource type="PackedScene" uid="uid://wc7khoqdj8e0" path="res://player/frog.tscn" id="3_2jqb1"]
 [ext_resource type="PackedScene" uid="uid://eskrtblwhn3o" path="res://ui/HealthBar.tscn" id="4_apx21"]
 [ext_resource type="PackedScene" uid="uid://o633osrk6aw5" path="res://next-level/crystal.tscn" id="5_iyk6l"]
-[ext_resource type="PackedScene" uid="uid://cf7vker1alt2f" path="res://traps/level-2/trap-level-2.tscn" id="6_otncq"]
+[ext_resource type="PackedScene" uid="uid://cdwe8kruim6g" path="res://traps/level-5/trap-level-5.tscn" id="6_xow1m"]
 
 [node name="main" type="Node2D"]
 position = Vector2(477, 254)
 
-[node name="Level-2" type="Sprite2D" parent="."]
+[node name="Level-5" type="Sprite2D" parent="."]
 position = Vector2(113.60757, 74.51846)
 scale = Vector2(1.1531104, 1.119595)
 texture = ExtResource("1_8ltht")
 
-[node name="StaticBody2D" parent="." instance=ExtResource("2_xow1m")]
-position = Vector2(-216, 190)
+[node name="StaticBody2D" parent="." instance=ExtResource("2_8ltht")]
+position = Vector2(556, 275)
 
-[node name="StaticBody2D2" parent="." instance=ExtResource("2_xow1m")]
-position = Vector2(414, 189)
+[node name="StaticBody2D2" parent="." instance=ExtResource("2_8ltht")]
+position = Vector2(102, 209)
+
+[node name="StaticBody2D3" parent="." instance=ExtResource("2_8ltht")]
+position = Vector2(-330, 263)
 
 [node name="player" parent="." instance=ExtResource("3_2jqb1")]
-position = Vector2(-412, 118.000015)
+position = Vector2(-423.99997, 158.00002)
 rotation = 0.00181122
 collision_layer = 3
 collision_mask = 3
@@ -31,7 +34,13 @@ collision_mask = 3
 visible = false
 
 [node name="Crystal1" parent="." instance=ExtResource("5_iyk6l")]
-position = Vector2(582, 95)
+position = Vector2(636, 166)
 
-[node name="Area2D" parent="." instance=ExtResource("6_otncq")]
-position = Vector2(58, -313)
+[node name="Area2D" parent="." instance=ExtResource("6_xow1m")]
+position = Vector2(-253, -167)
+
+[node name="Area2D2" parent="." instance=ExtResource("6_xow1m")]
+position = Vector2(57, -168)
+
+[node name="Area2D3" parent="." instance=ExtResource("6_xow1m")]
+position = Vector2(353, -168)
