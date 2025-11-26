@@ -20,7 +20,7 @@ texture = ExtResource("1_tkmqy")
 visible = false
 
 [node name="Crystal1" parent="." instance=ExtResource("6_tkmqy")]
-position = Vector2(632, 173)
+position = Vector2(629, 164)
 
 [node name="StaticBody2D2" parent="." instance=ExtResource("7_sde5f")]
 position = Vector2(-378, 231)

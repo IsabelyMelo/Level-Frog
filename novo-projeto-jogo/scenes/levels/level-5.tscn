@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3 uid="uid://bm1e1r0txemiy"]
+
+[ext_resource type="Texture2D" uid="uid://440g2nytsflw" path="res://assets/backgrounds/levels/level-5.jpg" id="1_8ltht"]
+[ext_resource type="PackedScene" uid="uid://c563q51vdodul" path="res://platforms/level2/plataform-level2.tscn" id="2_xow1m"]
+[ext_resource type="PackedScene" uid="uid://wc7khoqdj8e0" path="res://player/player1.tscn" id="3_2jqb1"]
+[ext_resource type="PackedScene" uid="uid://eskrtblwhn3o" path="res://ui/HealthBar.tscn" id="4_apx21"]
+[ext_resource type="PackedScene" uid="uid://o633osrk6aw5" path="res://next-level/crystal.tscn" id="5_iyk6l"]
+[ext_resource type="PackedScene" uid="uid://cf7vker1alt2f" path="res://traps/trap-level-2.tscn" id="6_otncq"]
+
+[node name="main" type="Node2D"]
+position = Vector2(477, 254)
+
+[node name="Level-2" type="Sprite2D" parent="."]
+position = Vector2(113.60757, 74.51846)
+scale = Vector2(1.1531104, 1.119595)
+texture = ExtResource("1_8ltht")
+
+[node name="StaticBody2D" parent="." instance=ExtResource("2_xow1m")]
+position = Vector2(-216, 190)
+
+[node name="StaticBody2D2" parent="." instance=ExtResource("2_xow1m")]
+position = Vector2(414, 189)
+
+[node name="player" parent="." instance=ExtResource("3_2jqb1")]
+position = Vector2(-412, 118.000015)
+rotation = 0.00181122
+collision_layer = 3
+collision_mask = 3
+
+[node name="vida" parent="." instance=ExtResource("4_apx21")]
+visible = false
+
+[node name="Crystal1" parent="." instance=ExtResource("5_iyk6l")]
+position = Vector2(582, 95)
+
+[node name="Area2D" parent="." instance=ExtResource("6_otncq")]
+position = Vector2(58, -313)

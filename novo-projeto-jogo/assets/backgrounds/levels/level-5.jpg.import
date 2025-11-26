@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://tlya440gjiry"
-path="res://.godot/imported/new_hover_start.png-b3be06ab7ec987a91e5c08f0571396c5.ctex"
+uid="uid://440g2nytsflw"
+path="res://.godot/imported/level-5.jpg-6292baeb7133abd32e87de9026ac0931.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/elements/menu/new_hover_start.png"
-dest_files=["res://.godot/imported/new_hover_start.png-b3be06ab7ec987a91e5c08f0571396c5.ctex"]
+source_file="res://assets/backgrounds/levels/level-5.jpg"
+dest_files=["res://.godot/imported/level-5.jpg-6292baeb7133abd32e87de9026ac0931.ctex"]
 
 [params]
 
