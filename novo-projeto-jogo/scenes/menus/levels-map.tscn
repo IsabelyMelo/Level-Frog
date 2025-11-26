@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://dtn7erc8q5unh"]
 
-[ext_resource type="Script" uid="uid://3kkx7ebb1q0b" path="res://scenes/menus/levels_map.gd" id="1_gbrii"]
+[ext_resource type="Script" uid="uid://3kkx7ebb1q0b" path="res://scenes/menus/levels-map.gd" id="1_gbrii"]
 [ext_resource type="Texture2D" uid="uid://dd1he38lpx68r" path="res://assets/backgrounds/map/map-levels.png" id="2_gbrii"]
 [ext_resource type="Texture2D" uid="uid://bnetx6j7646b1" path="res://assets/character/menu/frog.png" id="3_3tswa"]
 [ext_resource type="Texture2D" uid="uid://cmsglx37h7xvk" path="res://assets/elements/menu/exit.png" id="4_dhk2l"]

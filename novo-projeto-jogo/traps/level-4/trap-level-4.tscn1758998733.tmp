@@ -1,0 +1,56 @@
+[gd_scene load_steps=9 format=3 uid="uid://cyqj1ph13q3wj"]
+
+[ext_resource type="Script" uid="uid://by56leawpwqnt" path="res://traps/level-4/trap-level-4.gd" id="1_o0xyu"]
+[ext_resource type="Texture2D" uid="uid://p1756cbh2d7i" path="res://assets/elements/death/Tumbleweed/Tumbleweed-1.png" id="2_o0xyu"]
+[ext_resource type="Texture2D" uid="uid://bc8ihv6su3h0i" path="res://assets/elements/death/Tumbleweed/Tumbleweed-2.png" id="3_ltar5"]
+[ext_resource type="Texture2D" uid="uid://bf2522edmet3n" path="res://assets/elements/death/Tumbleweed/Tumbleweed-3.png" id="4_gqenl"]
+[ext_resource type="Texture2D" uid="uid://c32ucnd2ivia5" path="res://assets/elements/death/Tumbleweed/Tumbleweed-4.png" id="5_ke8r3"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s5uss"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_o0xyu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ltar5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_gqenl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ke8r3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w0pts"]
+size = Vector2(155.5, 154)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_815s1"]
+size = Vector2(1234, 163)
+
+[node name="Area2D" type="Area2D"]
+position = Vector2(1, 1)
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_o0xyu")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.67, 0.67)
+sprite_frames = SubResource("SpriteFrames_s5uss")
+frame = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(4.25, 2)
+shape = SubResource("RectangleShape2D_w0pts")
+
+[node name="Detector" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detector"]
+position = Vector2(-521, 13.5)
+shape = SubResource("RectangleShape2D_815s1")
+debug_color = Color(0.77532166, 0.40900102, 0.44989341, 0.41960785)

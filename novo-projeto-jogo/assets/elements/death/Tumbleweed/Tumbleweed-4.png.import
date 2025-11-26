@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c8fgo6nlcacg0"
-path="res://.godot/imported/pedras_pequenas_sem fundo_1.png-38aa60c220fa0eddfacf96bcedd15f36.ctex"
+uid="uid://c32ucnd2ivia5"
+path="res://.godot/imported/Tumbleweed-4.png-963ebdde3ce6955e4e529c30a993400e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/backgrounds/levels/pedras_pequenas_sem fundo_1.png"
-dest_files=["res://.godot/imported/pedras_pequenas_sem fundo_1.png-38aa60c220fa0eddfacf96bcedd15f36.ctex"]
+source_file="res://assets/elements/death/Tumbleweed/Tumbleweed-4.png"
+dest_files=["res://.godot/imported/Tumbleweed-4.png-963ebdde3ce6955e4e529c30a993400e.ctex"]
 
 [params]
 

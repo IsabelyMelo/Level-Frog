@@ -1,13 +1,13 @@
 [gd_scene load_steps=9 format=3 uid="uid://cbqei71gsgj1l"]
 
-[ext_resource type="PackedScene" uid="uid://wc7khoqdj8e0" path="res://player/player1.tscn" id="1_nol18"]
+[ext_resource type="PackedScene" uid="uid://wc7khoqdj8e0" path="res://player/frog.tscn" id="1_nol18"]
 [ext_resource type="Texture2D" uid="uid://dq4gwxhw15asr" path="res://assets/backgrounds/levels/level-2.jpg" id="1_p8qr4"]
 [ext_resource type="PackedScene" uid="uid://eskrtblwhn3o" path="res://ui/HealthBar.tscn" id="4_25vrs"]
 [ext_resource type="PackedScene" uid="uid://o633osrk6aw5" path="res://next-level/crystal.tscn" id="6_jr5bq"]
-[ext_resource type="PackedScene" uid="uid://cf7vker1alt2f" path="res://traps/trap-level-2.tscn" id="6_mr0nw"]
-[ext_resource type="PackedScene" uid="uid://c563q51vdodul" path="res://platforms/level2/plataform-level2.tscn" id="7_6akv6"]
+[ext_resource type="PackedScene" uid="uid://cf7vker1alt2f" path="res://traps/level-2/trap-level-2.tscn" id="6_mr0nw"]
+[ext_resource type="PackedScene" uid="uid://c563q51vdodul" path="res://platforms/level-2/plataform-level2.tscn" id="7_6akv6"]
 [ext_resource type="PackedScene" uid="uid://dkxcwf42xi3k1" path="res://platforms/wall.tscn" id="7_p8qr4"]
-[ext_resource type="PackedScene" uid="uid://ygpbxd83axwt" path="res://traps/traps.tscn" id="8_p8qr4"]
+[ext_resource type="PackedScene" uid="uid://ygpbxd83axwt" path="res://traps/level-1/trap-level-1.tscn" id="8_p8qr4"]
 
 [node name="main" type="Node2D"]
 position = Vector2(477, 254)

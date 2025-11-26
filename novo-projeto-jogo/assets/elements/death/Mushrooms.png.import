@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c2udke8fqwkti"
-path="res://.godot/imported/death-1.png-359750e7128d72b8a3c7fd00c5afc699.ctex"
+path="res://.godot/imported/Mushrooms.png-76662ff147c05972e1ed7fc76870a211.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/elements/death/death-1.png"
-dest_files=["res://.godot/imported/death-1.png-359750e7128d72b8a3c7fd00c5afc699.ctex"]
+source_file="res://assets/elements/death/Mushrooms.png"
+dest_files=["res://.godot/imported/Mushrooms.png-76662ff147c05972e1ed7fc76870a211.ctex"]
 
 [params]
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://ck7lxqxlreheu"]
 
-[ext_resource type="Texture2D" uid="uid://d356lsih200dh" path="res://assets/elements/plataforms/ponte.png" id="1_6gv8m"]
+[ext_resource type="Texture2D" uid="uid://dytk5teruol31" path="res://assets/elements/plataforms/ponte.png" id="1_6gv8m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bbht8"]
 size = Vector2(522.35297, 45.555565)

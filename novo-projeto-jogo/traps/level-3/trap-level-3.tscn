@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://ngab5fs5x136"]
 
-[ext_resource type="Script" uid="uid://c0yly8dw7pfmd" path="res://platforms/level3/pedra_simples_trap.gd" id="1_3ginj"]
+[ext_resource type="Script" uid="uid://c0yly8dw7pfmd" path="res://traps/level-3/trap-level-3.gd" id="1_3ginj"]
 [ext_resource type="Texture2D" uid="uid://dsnfvx80ne5ps" path="res://assets/elements/plataforms/pedras_pequenas_sem fundo_4.png" id="1_tlmrr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bbht8"]
