@@ -1,0 +1,56 @@
+[gd_scene load_steps=8 format=3 uid="uid://2ifxgipql1jy"]
+
+[ext_resource type="Texture2D" uid="uid://be3dy3yp56ad6" path="res://assets/backgrounds/levels/level-4.png" id="1_qwhfd"]
+[ext_resource type="PackedScene" uid="uid://d10big3ks601n" path="res://platforms/level4/plataform-level4.tscn" id="2_7ngkv"]
+[ext_resource type="PackedScene" uid="uid://wc7khoqdj8e0" path="res://player/player1.tscn" id="3_8mmlf"]
+[ext_resource type="PackedScene" uid="uid://eskrtblwhn3o" path="res://ui/HealthBar.tscn" id="4_7vhjv"]
+[ext_resource type="PackedScene" uid="uid://o633osrk6aw5" path="res://next-level/crystal.tscn" id="5_l56ll"]
+[ext_resource type="PackedScene" uid="uid://cf7vker1alt2f" path="res://traps/trap-level-2.tscn" id="6_y6uma"]
+[ext_resource type="PackedScene" uid="uid://dkxcwf42xi3k1" path="res://platforms/wall.tscn" id="7_3vqj2"]
+
+[node name="main" type="Node2D"]
+position = Vector2(477, 254)
+
+[node name="Level-2" type="Sprite2D" parent="."]
+position = Vector2(99.999985, 76.000015)
+scale = Vector2(0.7659527, 0.7659527)
+texture = ExtResource("1_qwhfd")
+
+[node name="StaticBody2D2" parent="." instance=ExtResource("2_7ngkv")]
+position = Vector2(680, 97)
+
+[node name="StaticBody2D" parent="." instance=ExtResource("2_7ngkv")]
+position = Vector2(-436, 97)
+
+[node name="player" parent="." instance=ExtResource("3_8mmlf")]
+position = Vector2(-425.99997, 151.00002)
+rotation = 0.00181122
+collision_layer = 3
+collision_mask = 3
+
+[node name="vida" parent="." instance=ExtResource("4_7vhjv")]
+visible = false
+
+[node name="Crystal1" parent="." instance=ExtResource("5_l56ll")]
+position = Vector2(582, 95)
+
+[node name="Area2D" parent="." instance=ExtResource("6_y6uma")]
+position = Vector2(58, -313)
+
+[node name="StaticBody2D4" parent="." instance=ExtResource("7_3vqj2")]
+position = Vector2(695, -162)
+rotation = 1.5707964
+scale = Vector2(1.1199994, 1.1199994)
+
+[node name="StaticBody2D3" parent="." instance=ExtResource("7_3vqj2")]
+position = Vector2(-499, -161)
+rotation = 1.5707964
+scale = Vector2(1.1199994, 1)
+
+[node name="StaticBody2D5" parent="." instance=ExtResource("7_3vqj2")]
+position = Vector2(-302, 427)
+scale = Vector2(1.8543992, 1)
+
+[node name="StaticBody2D6" parent="." instance=ExtResource("7_3vqj2")]
+position = Vector2(-306.00003, -276)
+scale = Vector2(1.8799994, 1)

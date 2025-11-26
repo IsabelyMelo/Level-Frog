@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpmkc7r7xolhg"
-path="res://.godot/imported/pedras_pequenas_sem fundo_3.png-0e858a6f8012aef9f11fd4e8ea27c2d7.ctex"
+uid="uid://cwq5lwuh305d6"
+path="res://.godot/imported/pedras_pequenas_sem fundo_2.png-1eafe4d4c35d9488e7534de2176797a5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/elements/plataforms/pedras_pequenas_sem fundo_3.png"
-dest_files=["res://.godot/imported/pedras_pequenas_sem fundo_3.png-0e858a6f8012aef9f11fd4e8ea27c2d7.ctex"]
+source_file="res://assets/elements/plataforms/pedras_pequenas_sem fundo_2.png"
+dest_files=["res://.godot/imported/pedras_pequenas_sem fundo_2.png-1eafe4d4c35d9488e7534de2176797a5.ctex"]
 
 [params]
 

@@ -1,0 +1,22 @@
+extends Area2D
+
+@export var speed: float = 600
+
+var falling: bool = false
+
+func _ready():
+	# Detector detecta o player
+	$Detector.connect("body_entered", _on_detector_body_entered)
+	
+	# Trap causa dano quando colide
+
+
+func _physics_process(delta):
+	if falling:
+		position.y += speed * delta   # cai verticalmente
+
+
+func _on_detector_body_entered(body):
+	# Ativa a queda somente se for o player
+	if body.is_in_group("Player"):
+		falling = true

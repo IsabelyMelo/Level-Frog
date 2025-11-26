@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bdo2mtxvn553s"]
 
-[ext_resource type="Texture2D" uid="uid://c8fgo6nlcacg0" path="res://assets/backgrounds/levels/pedras_pequenas_sem fundo_1.png" id="1_k0jyw"]
+[ext_resource type="Texture2D" uid="uid://c8fgo6nlcacg0" path="res://assets/elements/plataforms/pedras_pequenas_sem fundo_1.png" id="1_k0jyw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bbht8"]
 size = Vector2(347, 107)

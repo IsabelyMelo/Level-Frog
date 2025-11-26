@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://vwgky611w1dh"]
+
+[ext_resource type="Script" uid="uid://c54ad2alpa4f7" path="res://platforms/level1/fakeplataform_level_1.gd" id="1_fwd5k"]
+[ext_resource type="Texture2D" uid="uid://dpmkc7r7xolhg" path="res://assets/elements/plataforms/pedras_pequenas_sem fundo_3.png" id="1_p4xyi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bbht8"]
+size = Vector2(351.6667, 176.66667)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p4xyi"]
+size = Vector2(137, 129)
+
+[node name="Area2D" type="Area2D"]
+collision_layer = 8
+collision_mask = 8
+script = ExtResource("1_fwd5k")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-56.250008, 44.937504)
+scale = Vector2(0.6517858, 0.82475483)
+texture = ExtResource("1_p4xyi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(-55.25, 54.500004)
+scale = Vector2(0.3, 0.3)
+shape = SubResource("RectangleShape2D_bbht8")
+
+[node name="Detector" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detector"]
+visible = false
+position = Vector2(-51.5, 51.5)
+shape = SubResource("RectangleShape2D_p4xyi")

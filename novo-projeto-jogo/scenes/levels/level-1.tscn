@@ -1,12 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://diymrhfub8udy"]
+[gd_scene load_steps=9 format=3 uid="uid://diymrhfub8udy"]
 
 [ext_resource type="PackedScene" uid="uid://ygpbxd83axwt" path="res://traps/traps.tscn" id="1_ov1ij"]
-[ext_resource type="Texture2D" uid="uid://0ycb2bsggr37" path="res://assets/backgrounds/levels/sem-lago-level-1.JPG" id="1_pirx1"]
+[ext_resource type="Texture2D" uid="uid://0ycb2bsggr37" path="res://assets/backgrounds/levels/level-1.JPG" id="1_pirx1"]
 [ext_resource type="PackedScene" uid="uid://wc7khoqdj8e0" path="res://player/player1.tscn" id="2_jsq00"]
 [ext_resource type="PackedScene" uid="uid://eskrtblwhn3o" path="res://ui/HealthBar.tscn" id="3_ivs8b"]
-[ext_resource type="PackedScene" uid="uid://ck7lxqxlreheu" path="res://platforms/plataform_level1.tscn" id="4_wubvj"]
-[ext_resource type="PackedScene" uid="uid://vwgky611w1dh" path="res://platforms/fakeplataform_level1.tscn" id="5_wejd8"]
+[ext_resource type="PackedScene" uid="uid://ck7lxqxlreheu" path="res://platforms/level1/plataform_level1.tscn" id="4_wubvj"]
+[ext_resource type="PackedScene" uid="uid://vwgky611w1dh" path="res://platforms/level1/fakeplataform_level1.tscn" id="5_wejd8"]
 [ext_resource type="PackedScene" uid="uid://o633osrk6aw5" path="res://next-level/crystal.tscn" id="6_de582"]
+[ext_resource type="PackedScene" uid="uid://dkxcwf42xi3k1" path="res://platforms/wall.tscn" id="8_wejd8"]
 
 [node name="main" type="Node2D"]
 position = Vector2(478, 255)
@@ -49,3 +50,21 @@ position = Vector2(327, 367)
 
 [node name="death4" parent="." instance=ExtResource("1_ov1ij")]
 position = Vector2(695, 367)
+
+[node name="StaticBody2D4" parent="." instance=ExtResource("8_wejd8")]
+position = Vector2(695, -162)
+rotation = 1.5707964
+scale = Vector2(1.1199994, 1.1199994)
+
+[node name="StaticBody2D" parent="." instance=ExtResource("8_wejd8")]
+position = Vector2(-499, -161)
+rotation = 1.5707964
+scale = Vector2(1.1199994, 1)
+
+[node name="StaticBody2D3" parent="." instance=ExtResource("8_wejd8")]
+position = Vector2(-292, 438)
+scale = Vector2(1.8543992, 1)
+
+[node name="StaticBody2D2" parent="." instance=ExtResource("8_wejd8")]
+position = Vector2(-306.00003, -276)
+scale = Vector2(1.8799994, 1)
