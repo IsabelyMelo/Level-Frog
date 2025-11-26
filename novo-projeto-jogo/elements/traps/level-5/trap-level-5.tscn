@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cdwe8kruim6g"]
 
-[ext_resource type="Script" uid="uid://dxs6vvw8kmod4" path="res://elements/level-5/trap-level-5.gd" id="1_f3ols"]
+[ext_resource type="Script" uid="uid://dxs6vvw8kmod4" path="res://elements/traps/level-5/trap-level-5.gd" id="1_f3ols"]
 [ext_resource type="Texture2D" uid="uid://5mar6mldnf7c" path="res://assets/elements/plataforms/stalactite-2.png" id="2_3r3kk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w0pts"]
