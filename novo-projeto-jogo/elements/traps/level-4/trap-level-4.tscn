@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://cyqj1ph13q3wj"]
 
-[ext_resource type="Script" uid="uid://by56leawpwqnt" path="res://traps/level-4/trap-level-4.gd" id="1_o0xyu"]
+[ext_resource type="Script" uid="uid://by56leawpwqnt" path="res://elements/traps/level-4/trap-level-4.gd" id="1_o0xyu"]
 [ext_resource type="Texture2D" uid="uid://p1756cbh2d7i" path="res://assets/elements/death/Tumbleweed/Tumbleweed-1.png" id="2_o0xyu"]
 [ext_resource type="Texture2D" uid="uid://bc8ihv6su3h0i" path="res://assets/elements/death/Tumbleweed/Tumbleweed-2.png" id="3_ltar5"]
 [ext_resource type="Texture2D" uid="uid://bf2522edmet3n" path="res://assets/elements/death/Tumbleweed/Tumbleweed-3.png" id="4_gqenl"]

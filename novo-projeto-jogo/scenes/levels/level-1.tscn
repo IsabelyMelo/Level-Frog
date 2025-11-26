@@ -1,13 +1,13 @@
 [gd_scene load_steps=9 format=3 uid="uid://diymrhfub8udy"]
 
-[ext_resource type="PackedScene" uid="uid://ygpbxd83axwt" path="res://traps/level-1/trap-level-1.tscn" id="1_ov1ij"]
+[ext_resource type="PackedScene" uid="uid://ygpbxd83axwt" path="res://elements/traps/level-1/trap-level-1.tscn" id="1_ov1ij"]
 [ext_resource type="Texture2D" uid="uid://0ycb2bsggr37" path="res://assets/backgrounds/levels/level-1.JPG" id="1_pirx1"]
-[ext_resource type="PackedScene" uid="uid://wc7khoqdj8e0" path="res://player/frog.tscn" id="2_jsq00"]
-[ext_resource type="PackedScene" uid="uid://eskrtblwhn3o" path="res://ui/HealthBar.tscn" id="3_ivs8b"]
-[ext_resource type="PackedScene" uid="uid://ck7lxqxlreheu" path="res://platforms/level-1/plataform-level1.tscn" id="4_wubvj"]
-[ext_resource type="PackedScene" uid="uid://vwgky611w1dh" path="res://traps/level-1/fakeplataform-level-1.tscn" id="5_wejd8"]
-[ext_resource type="PackedScene" uid="uid://o633osrk6aw5" path="res://next-level/crystal.tscn" id="6_de582"]
-[ext_resource type="PackedScene" uid="uid://dkxcwf42xi3k1" path="res://platforms/wall.tscn" id="8_wejd8"]
+[ext_resource type="PackedScene" uid="uid://wc7khoqdj8e0" path="res://elements/player/frog.tscn" id="2_jsq00"]
+[ext_resource type="PackedScene" uid="uid://eskrtblwhn3o" path="res://elements/ui/HealthBar.tscn" id="3_ivs8b"]
+[ext_resource type="PackedScene" uid="uid://ck7lxqxlreheu" path="res://elements/platforms/level-1/plataform-level1.tscn" id="4_wubvj"]
+[ext_resource type="PackedScene" uid="uid://vwgky611w1dh" path="res://elements/traps/level-1/fakeplataform-level-1.tscn" id="5_wejd8"]
+[ext_resource type="PackedScene" uid="uid://o633osrk6aw5" path="res://elements/crystal/crystal.tscn" id="6_de582"]
+[ext_resource type="PackedScene" uid="uid://dkxcwf42xi3k1" path="res://elements/platforms/wall.tscn" id="8_wejd8"]
 
 [node name="main" type="Node2D"]
 position = Vector2(478, 255)

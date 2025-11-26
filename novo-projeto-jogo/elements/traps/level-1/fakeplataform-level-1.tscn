@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://vwgky611w1dh"]
 
-[ext_resource type="Script" uid="uid://c54ad2alpa4f7" path="res://traps/level-1/fakeplataform-level-1.gd" id="1_fwd5k"]
+[ext_resource type="Script" uid="uid://c54ad2alpa4f7" path="res://elements/traps/level-1/fakeplataform-level-1.gd" id="1_fwd5k"]
 [ext_resource type="Texture2D" uid="uid://dpmkc7r7xolhg" path="res://assets/elements/plataforms/pedras_pequenas_sem fundo_3.png" id="1_p4xyi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bbht8"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://ygpbxd83axwt"]
 
-[ext_resource type="Script" uid="uid://dqo870kflyr80" path="res://traps/level-1/trap-level-1.gd" id="2_57cd2"]
+[ext_resource type="Script" uid="uid://dqo870kflyr80" path="res://elements/traps/level-1/trap-level-1.gd" id="2_57cd2"]
 [ext_resource type="Texture2D" uid="uid://c2udke8fqwkti" path="res://assets/elements/death/Mushrooms.png" id="2_wnpce"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w0pts"]

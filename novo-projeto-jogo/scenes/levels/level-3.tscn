@@ -1,13 +1,13 @@
 [gd_scene load_steps=9 format=3 uid="uid://bu8wjqrotuw7k"]
 
 [ext_resource type="Texture2D" uid="uid://c2wlafh14aqy8" path="res://assets/backgrounds/levels/level-3.png" id="1_tkmqy"]
-[ext_resource type="PackedScene" uid="uid://wc7khoqdj8e0" path="res://player/frog.tscn" id="2_tfl7p"]
-[ext_resource type="PackedScene" uid="uid://eskrtblwhn3o" path="res://ui/HealthBar.tscn" id="3_plg4r"]
-[ext_resource type="PackedScene" uid="uid://ngab5fs5x136" path="res://traps/level-3/trap-level-3.tscn" id="6_sde5f"]
-[ext_resource type="PackedScene" uid="uid://o633osrk6aw5" path="res://next-level/crystal.tscn" id="6_tkmqy"]
-[ext_resource type="PackedScene" uid="uid://ygpbxd83axwt" path="res://traps/level-1/trap-level-1.tscn" id="7_odt7l"]
-[ext_resource type="PackedScene" uid="uid://bdo2mtxvn553s" path="res://platforms/level-3/plataform-level-3.tscn" id="7_sde5f"]
-[ext_resource type="PackedScene" uid="uid://dkxcwf42xi3k1" path="res://platforms/wall.tscn" id="8_odt7l"]
+[ext_resource type="PackedScene" uid="uid://wc7khoqdj8e0" path="res://elements/player/frog.tscn" id="2_tfl7p"]
+[ext_resource type="PackedScene" uid="uid://eskrtblwhn3o" path="res://elements/ui/HealthBar.tscn" id="3_plg4r"]
+[ext_resource type="PackedScene" uid="uid://ngab5fs5x136" path="res://elements/traps/level-3/trap-level-3.tscn" id="6_sde5f"]
+[ext_resource type="PackedScene" uid="uid://o633osrk6aw5" path="res://elements/crystal/crystal.tscn" id="6_tkmqy"]
+[ext_resource type="PackedScene" uid="uid://ygpbxd83axwt" path="res://elements/traps/level-1/trap-level-1.tscn" id="7_odt7l"]
+[ext_resource type="PackedScene" uid="uid://bdo2mtxvn553s" path="res://elements/platforms/level-3/plataform-level-3.tscn" id="7_sde5f"]
+[ext_resource type="PackedScene" uid="uid://dkxcwf42xi3k1" path="res://elements/platforms/wall.tscn" id="8_odt7l"]
 
 [node name="main" type="Node2D"]
 position = Vector2(477, 254)
