@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://ngab5fs5x136"]
+[gd_scene load_steps=7 format=3 uid="uid://ngab5fs5x136"]
 
 [ext_resource type="Script" uid="uid://c0yly8dw7pfmd" path="res://elements/traps/level-3/trap-level-3.gd" id="1_3ginj"]
 [ext_resource type="Texture2D" uid="uid://dsnfvx80ne5ps" path="res://assets/elements/plataforms/pedras_pequenas_sem fundo_4.png" id="1_tlmrr"]
+[ext_resource type="AudioStream" uid="uid://b12puntqvrbb7" path="res://songs/stone_fall.wav" id="3_8lgnf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bbht8"]
 size = Vector2(146, 55.5)
@@ -39,3 +40,7 @@ visible = false
 position = Vector2(99.5, 55.5)
 shape = SubResource("RectangleShape2D_wsuqi")
 debug_color = Color(1, 0.59342134, 0.52757865, 0.41960785)
+
+[node name="fall_fx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_8lgnf")
+volume_db = -16.22

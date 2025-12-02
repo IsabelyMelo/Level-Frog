@@ -8,6 +8,7 @@ extends Area2D
 var falling: bool = false
 var start_position: Vector2
 var target_position: Vector2
+@onready var fall_fx: AudioStreamPlayer = $fall_fx
 
 func _ready():
 	# guarda a posição inicial
@@ -38,6 +39,7 @@ func _physics_process(delta):
 
 func _on_detector_body_entered(body):
 	# Ativa a queda somente se for o player
+	fall_fx.play()
 	if body.is_in_group("Player"):
 		falling = true
 

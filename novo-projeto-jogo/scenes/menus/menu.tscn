@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://5e5loqk4lbb1"]
+[gd_scene load_steps=10 format=3 uid="uid://5e5loqk4lbb1"]
 
 [ext_resource type="Script" uid="uid://dwvvke003u7pa" path="res://scenes/menus/menu.gd" id="1_y80bi"]
 [ext_resource type="Texture2D" uid="uid://buwtvmbberaon" path="res://assets/backgrounds/menu/bg-1-lake-1920x1080-bottom.jpg" id="1_yq34a"]
@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://tlya440gjiry" path="res://assets/elements/menu/new_hover_start.png" id="4_yq34a"]
 [ext_resource type="Texture2D" uid="uid://cmsglx37h7xvk" path="res://assets/elements/menu/exit.png" id="5_fw0bg"]
 [ext_resource type="Texture2D" uid="uid://cwg8xrcmh36ly" path="res://assets/elements/menu/new_hover_exit.png" id="6_t1b8g"]
+[ext_resource type="AudioStream" uid="uid://cr3gckgm8icmm" path="res://songs/menu_bg.mp3" id="8_7yii3"]
+[ext_resource type="AudioStream" uid="uid://ddugtkrmstqnn" path="res://songs/menu_select.mp3" id="9_rdq0w"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -69,5 +71,16 @@ texture_normal = ExtResource("3_t1b8g")
 texture_pressed = ExtResource("3_t1b8g")
 texture_hover = ExtResource("4_yq34a")
 
+[node name="bg_music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_7yii3")
+volume_db = -8.587
+autoplay = true
+
+[node name="menu_select_fx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_rdq0w")
+volume_db = 8.587
+
+[connection signal="mouse_entered" from="exit" to="." method="_on_exit_mouse_entered"]
 [connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]
+[connection signal="mouse_entered" from="start" to="." method="_on_start_mouse_entered"]
 [connection signal="pressed" from="start" to="." method="_on_start_pressed"]

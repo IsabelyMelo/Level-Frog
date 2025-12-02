@@ -19,6 +19,7 @@ var origin_position: Vector2
 @onready var anim: AnimatedSprite2D = $Sprite2D
 var base_scale_x: float = 0.6
 var base_scale_y: float = 0.6
+@onready var jump_fx: AudioStreamPlayer = $jump
 
 # FLIP SUAVE
 var is_flipping: bool = false
@@ -134,6 +135,7 @@ func _physics_process(delta: float) -> void:
 
 	if is_on_floor() and Input.is_action_pressed("ui_jump"):
 		velocity.y = -jump_force
+		jump_fx.play()
 
 	move_and_slide()
 	process_flip(delta)

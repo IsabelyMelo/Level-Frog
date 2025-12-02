@@ -1,6 +1,7 @@
 extends Area2D
 
 @export var speed: float = 600
+@onready var fall_fx: AudioStreamPlayer = $fall_fx
 
 var falling: bool = false
 
@@ -20,3 +21,4 @@ func _on_detector_body_entered(body):
 	# Ativa a queda somente se for o player
 	if body.is_in_group("Player"):
 		falling = true
+		fall_fx.play()

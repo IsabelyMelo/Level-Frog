@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://wc7khoqdj8e0"]
+[gd_scene load_steps=12 format=3 uid="uid://wc7khoqdj8e0"]
 
 [ext_resource type="Script" uid="uid://dp0y0wsbsf4oq" path="res://elements/player/frog.gd" id="1_e285b"]
 [ext_resource type="Texture2D" uid="uid://cgkx63ko8aytk" path="res://assets/character/still-1.png" id="2_bte48"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cqbpy6xl3gseu" path="res://assets/character/walking-1.png" id="5_fr5mi"]
 [ext_resource type="Texture2D" uid="uid://0uibvmdtqlie" path="res://assets/character/walking-2.png" id="6_ywrp6"]
 [ext_resource type="Texture2D" uid="uid://cjarm2n7a4c1x" path="res://assets/character/walking-3.png" id="7_knkjd"]
+[ext_resource type="AudioStream" uid="uid://daddmo2gtl5kh" path="res://songs/jump.wav" id="8_datbp"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7r312"]
 animations = [{
@@ -76,3 +77,7 @@ shape = SubResource("RectangleShape2D_sbmu3")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 visible = false
 shape = SubResource("CircleShape2D_1yn3x")
+
+[node name="jump" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_datbp")
+volume_db = -24.807

@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://cf7vker1alt2f"]
+[gd_scene load_steps=6 format=3 uid="uid://cf7vker1alt2f"]
 
 [ext_resource type="Script" uid="uid://dnur5b4xpd0og" path="res://elements/traps/level-2/trap-level-2.gd" id="1_uou5t"]
 [ext_resource type="Texture2D" uid="uid://d2i86f8hllh4v" path="res://assets/elements/plataforms/tronco.png" id="2_uou5t"]
+[ext_resource type="AudioStream" uid="uid://dhtdrtn6khujc" path="res://songs/wood_fall.wav" id="3_f025f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w0pts"]
 size = Vector2(499, 148)
@@ -32,3 +33,7 @@ visible = false
 position = Vector2(56, 458)
 shape = SubResource("RectangleShape2D_815s1")
 debug_color = Color(0.77532166, 0.40900102, 0.44989341, 0.41960785)
+
+[node name="fall_fx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_f025f")
+volume_db = -10.495

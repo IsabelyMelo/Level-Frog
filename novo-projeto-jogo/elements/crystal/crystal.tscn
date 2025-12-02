@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://o633osrk6aw5"]
+[gd_scene load_steps=5 format=3 uid="uid://o633osrk6aw5"]
 
 [ext_resource type="Script" uid="uid://cyf2j2vq8arqb" path="res://elements/crystal/crystal.gd" id="1_35umt"]
 [ext_resource type="Texture2D" uid="uid://cn8kkc68jlgv2" path="res://assets/elements/next-level/crystal.png" id="2_8av8o"]
+[ext_resource type="AudioStream" uid="uid://g634s21c57la" path="res://songs/collect.wav" id="3_ep6ta"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vr0bs"]
 radius = 8.0
@@ -18,3 +19,7 @@ visible = false
 position = Vector2(-3, 1)
 scale = Vector2(4, 4)
 shape = SubResource("CapsuleShape2D_vr0bs")
+
+[node name="collect_fx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_ep6ta")
+volume_db = -16.22

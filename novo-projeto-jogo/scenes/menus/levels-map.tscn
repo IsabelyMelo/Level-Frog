@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://dtn7erc8q5unh"]
+[gd_scene load_steps=8 format=3 uid="uid://dtn7erc8q5unh"]
 
 [ext_resource type="Script" uid="uid://3kkx7ebb1q0b" path="res://scenes/menus/levels-map.gd" id="1_gbrii"]
 [ext_resource type="Texture2D" uid="uid://dd1he38lpx68r" path="res://assets/backgrounds/map/map-levels.png" id="2_gbrii"]
 [ext_resource type="Texture2D" uid="uid://bnetx6j7646b1" path="res://assets/character/menu/frog.png" id="3_3tswa"]
 [ext_resource type="Texture2D" uid="uid://cmsglx37h7xvk" path="res://assets/elements/menu/exit.png" id="4_dhk2l"]
 [ext_resource type="Texture2D" uid="uid://cwg8xrcmh36ly" path="res://assets/elements/menu/new_hover_exit.png" id="5_5c6tf"]
+[ext_resource type="AudioStream" uid="uid://drb8pasotqplr" path="res://songs/select_fase.wav" id="6_dhti4"]
+[ext_resource type="AudioStream" uid="uid://ddugtkrmstqnn" path="res://songs/menu_select.mp3" id="7_sliku"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -91,9 +93,23 @@ offset_top = 386.0
 offset_right = 431.0
 offset_bottom = 433.0
 
+[node name="select_fase_fx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_dhti4")
+volume_db = -13.358
+
+[node name="menu_exit_fx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_sliku")
+volume_db = 7.634
+
+[connection signal="mouse_entered" from="exit" to="." method="_on_exit_mouse_entered"]
 [connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]
+[connection signal="mouse_entered" from="level_1" to="." method="_on_level_1_mouse_entered"]
 [connection signal="pressed" from="level_1" to="." method="_on_level_1_pressed"]
+[connection signal="mouse_entered" from="level_2" to="." method="_on_level_2_mouse_entered"]
 [connection signal="pressed" from="level_2" to="." method="_on_level_2_pressed"]
+[connection signal="mouse_entered" from="level_3" to="." method="_on_level_3_mouse_entered"]
 [connection signal="pressed" from="level_3" to="." method="_on_level_3_pressed"]
+[connection signal="mouse_entered" from="level_4" to="." method="_on_level_4_mouse_entered"]
 [connection signal="pressed" from="level_4" to="." method="_on_level_4_pressed"]
+[connection signal="mouse_entered" from="level_5" to="." method="_on_level_5_mouse_entered"]
 [connection signal="pressed" from="level_5" to="." method="_on_level_5_pressed"]

@@ -4,6 +4,7 @@ extends Area2D
 @export var damage: int = 100
 
 var falling: bool = false
+@onready var fall_fx: AudioStreamPlayer = $fall_fx
 
 func _ready():
 	# Detector detecta o player
@@ -22,6 +23,7 @@ func _on_detector_body_entered(body):
 	# Ativa a queda somente se for o player
 	if body.is_in_group("Player"):
 		falling = true
+		fall_fx.play()
 
 
 func _on_body_entered(body):

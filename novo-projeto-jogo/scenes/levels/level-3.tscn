@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bu8wjqrotuw7k"]
+[gd_scene load_steps=10 format=3 uid="uid://bu8wjqrotuw7k"]
 
 [ext_resource type="Texture2D" uid="uid://c2wlafh14aqy8" path="res://assets/backgrounds/levels/level-3.png" id="1_tkmqy"]
 [ext_resource type="PackedScene" uid="uid://wc7khoqdj8e0" path="res://elements/player/frog.tscn" id="2_tfl7p"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://ygpbxd83axwt" path="res://elements/traps/level-1/trap-level-1.tscn" id="7_odt7l"]
 [ext_resource type="PackedScene" uid="uid://bdo2mtxvn553s" path="res://elements/platforms/level-3/plataform-level-3.tscn" id="7_sde5f"]
 [ext_resource type="PackedScene" uid="uid://dkxcwf42xi3k1" path="res://elements/platforms/wall.tscn" id="8_odt7l"]
+[ext_resource type="AudioStream" uid="uid://cb8t6jh42b3xs" path="res://songs/fase_sound.mp3" id="9_anfik"]
 
 [node name="main" type="Node2D"]
 position = Vector2(477, 254)
@@ -72,3 +73,8 @@ scale = Vector2(1.8543992, 1)
 [node name="StaticBody2D7" parent="." instance=ExtResource("8_odt7l")]
 position = Vector2(-306.00003, -276)
 scale = Vector2(1.8799994, 1)
+
+[node name="bg_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_anfik")
+volume_db = -19.083
+autoplay = true
