@@ -2,6 +2,7 @@ extends Area2D
 
 @export var speed: float = 700
 @export var damage: int = 100
+@onready var gelo_fx: AudioStreamPlayer = $gelo_fx
 
 var falling: bool = false
 
@@ -22,6 +23,7 @@ func _on_detector_body_entered(body):
 	# Ativa a queda somente se for o player
 	if body.is_in_group("Player"):
 		falling = true
+		gelo_fx.play()
 
 
 func _on_body_entered(body):

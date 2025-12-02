@@ -7,23 +7,34 @@ extends Area2D
 
 var start_position: Vector2
 var target_position: Vector2
+
 # Estados: "IDLE" (parado), "GOING" (indo), "WAITING" (esperando), "RETURNING" (voltando), "DONE" (acabou)
 var state: String = "IDLE" 
+
+@onready var mato_1_fx: AudioStreamPlayer = $mato1_fx
+@onready var mato_2_fx: AudioStreamPlayer = $mato2_fx
+@onready var mato_3_fx: AudioStreamPlayer = $mato3_fx
+
+var _is_playing_mato_sequence: bool = false
+var _mato_sounds: Array
 
 func _ready():
 	# Guarda a posição inicial
 	start_position = position
+	
+	# Array com os 3 sons em ordem
+	_mato_sounds = [mato_1_fx, mato_2_fx, mato_3_fx]
 	
 	# Detector detecta o player
 	$Detector.connect("body_entered", _on_detector_body_entered)
 	
 	# Trap causa dano quando colide
 	connect("body_entered", _on_body_entered)
-	
+
 func _on_body_entered(body):
 	if body.has_method("take_damage"):
 		body.take_damage(damage)
-		
+
 func _physics_process(delta):
 	# Lógica de movimento baseada no estado atual
 	if state == "GOING":
@@ -40,6 +51,14 @@ func _physics_process(delta):
 		if position.distance_to(start_position) < 0.1:
 			state = "DONE" # Define como DONE para nunca mais ativar
 
+	# Controle do loop de sons
+	if state in ["GOING", "WAITING", "RETURNING"]:
+		if not _is_playing_mato_sequence:
+			_is_playing_mato_sequence = true
+			play_mato_sequence()
+	else:
+		_is_playing_mato_sequence = false
+
 func _on_detector_body_entered(body):
 	# Só ativa se estiver no estado inicial (IDLE) e for o Player
 	if state == "IDLE" and body.is_in_group("Player"):
@@ -50,21 +69,40 @@ func activate_trap(player):
 	var direction_x = sign(player.global_position.x - global_position.x)
 	
 	# Se a direção for 0 (estão exatamente no mesmo pixel X), chuta para a direita
-	if direction_x == 0: direction_x = 1
+	if direction_x == 0:
+		direction_x = 1
 	
 	# 2. Define o alvo (Posição atual + distância na direção X)
-	# Mantém o Y original (0 no segundo parametro do Vector2)
 	target_position = start_position + Vector2(direction_x * move_distance, 0)
 	
 	# 3. Muda o estado para começar a andar
 	state = "GOING"
 	
-	# DICA: Se o seu node for um AnimatedSprite2D, descomente abaixo:
-	$Sprite2D.play("default") 
+	$Sprite2D.play("default")
 
 func start_wait_timer():
 	state = "WAITING"
-	# Cria um timer temporário de 5 segundos
 	await get_tree().create_timer(wait_time).timeout
 	# Após o tempo acabar, muda o estado para voltar
 	state = "RETURNING"
+
+# -----------------------------
+#   LOOP DE EFEITOS SONOROS
+# -----------------------------
+func play_mato_sequence() -> void:
+	# Roda enquanto o state estiver em GOING, WAITING ou RETURNING
+	while state in ["GOING", "WAITING", "RETURNING"]:
+		for s in _mato_sounds:
+			# Se o estado mudar no meio, já sai
+			if not state in ["GOING", "WAITING", "RETURNING"]:
+				break
+			
+			# Garante que o som recomeça
+			s.stop()
+			s.play()
+			
+			# Espera o som terminar (precisa do sinal "finished" no AudioStreamPlayer)
+			await s.finished
+		
+	# Quando sair do while, libera a flag
+	_is_playing_mato_sequence = false

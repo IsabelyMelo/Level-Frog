@@ -1,10 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://cyqj1ph13q3wj"]
+[gd_scene load_steps=12 format=3 uid="uid://cyqj1ph13q3wj"]
 
 [ext_resource type="Script" uid="uid://by56leawpwqnt" path="res://elements/traps/level-4/trap-level-4.gd" id="1_o0xyu"]
 [ext_resource type="Texture2D" uid="uid://p1756cbh2d7i" path="res://assets/elements/death/Tumbleweed/Tumbleweed-1.png" id="2_o0xyu"]
 [ext_resource type="Texture2D" uid="uid://bc8ihv6su3h0i" path="res://assets/elements/death/Tumbleweed/Tumbleweed-2.png" id="3_ltar5"]
 [ext_resource type="Texture2D" uid="uid://bf2522edmet3n" path="res://assets/elements/death/Tumbleweed/Tumbleweed-3.png" id="4_gqenl"]
 [ext_resource type="Texture2D" uid="uid://c32ucnd2ivia5" path="res://assets/elements/death/Tumbleweed/Tumbleweed-4.png" id="5_ke8r3"]
+[ext_resource type="AudioStream" uid="uid://184dwkj2fig2" path="res://songs/mato1.wav" id="6_i416y"]
+[ext_resource type="AudioStream" uid="uid://dis4l3nna8xq0" path="res://songs/mato2.wav" id="7_6oaxh"]
+[ext_resource type="AudioStream" uid="uid://c546c1fxia7x0" path="res://songs/mato3.wav" id="8_1wuxm"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_s5uss"]
 animations = [{
@@ -53,3 +56,12 @@ shape = SubResource("RectangleShape2D_w0pts")
 position = Vector2(-221, 13.5)
 shape = SubResource("RectangleShape2D_815s1")
 debug_color = Color(0.77532166, 0.40900102, 0.44989341, 0.41960785)
+
+[node name="mato1_fx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_i416y")
+
+[node name="mato2_fx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_6oaxh")
+
+[node name="mato3_fx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_1wuxm")
